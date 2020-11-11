@@ -2,7 +2,7 @@
 import pyodbc
 
 # Create a class for the database
-class Database:
+class NW_Database:
 # initialise the class
     def __init__(self):
         self.server = "databases1.spartaglobal.academy"
@@ -41,7 +41,7 @@ class Database:
 
 
 if __name__ == '__main__':
-    test = Database()
+    test = NW_Database()
     test.__init__()
     # test.create_table()
     # test.user_insert()
