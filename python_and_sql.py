@@ -10,33 +10,33 @@ import requests
 
 server = "databases1.spartaglobal.academy"
 database = "Northwind"
-username = "SA"
-password = "Passw0rd2018"
+username = "**"
+password = "*******"
 northwind_connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 
 # server name - database name - username and password is required to connect to pyodbc
 cursor = northwind_connection.cursor()
 # cursor is the location of your mouse/current path
 
-# cursor.execute("SELECT @@VERSION")
+cursor.execute("SELECT @@VERSION")
 # select the version of current DB
-# row = cursor.fetchone()
-# print(row)
+row = cursor.fetchone()
+print(row)
 
 # In our DB we have table called Customers that has customers data available
-# cust_row = cursor.execute("SELECT * FROM Customers;").fetchall()
-# print(type(cust_row))
-# for records in cust_row:
-#     print(records)
+cust_row = cursor.execute("SELECT * FROM Customers;").fetchall()
+print(type(cust_row))
+for records in cust_row:
+    print(records)
 
 # We have another table in the DB called products
 
-# product_rows = cursor.execute("SELECT * FROM Products").fetchall()
-# # Running queries in our python program to access database and table inside the DBs
-# for product_records in product_rows:
-# # iterate through the table data and find the unit prices
-#     print(product_records.UnitPrice)
-# print(product_rows)
+product_rows = cursor.execute("SELECT * FROM Products").fetchall()
+# Running queries in our python program to access database and table inside the DBs
+for product_records in product_rows:
+# iterate through the table data and find the unit prices
+    print(product_records.UnitPrice)
+print(product_rows)
 
 product_row = cursor.execute("SELECT * FROM Products;")
 # getting the Product table
