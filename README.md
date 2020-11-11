@@ -88,9 +88,3 @@ while True:
 - cursor utilisation
 - fetchone() (select and record)
 - fetchall() (select all records)
-
-### Task
-- Create a new file and a class with function to establish connection with pyodbc
-- Create a function that create a table in the DB
-- Create a function that prompts user to input data in that table
-- Create a new file called PYODBC_TASK.md 
