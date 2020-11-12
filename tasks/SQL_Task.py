@@ -7,8 +7,8 @@ class NW_Database:
     def __init__(self):
         self.server = "databases1.spartaglobal.academy"
         self.database = "Northwind"
-        self.username = "**"
-        self.password = "******"
+        self.username = "SA"
+        self.password = "Passw0rd2018"
         # establish connection
         self.northwind_connection = pyodbc.connect(
             'DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + self.server + ';DATABASE=' + self.database + ';UID=' + self.username + ';PWD=' + self.password)
